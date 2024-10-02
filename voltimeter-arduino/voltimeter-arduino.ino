@@ -8,6 +8,7 @@ void setup() {
 
   Serial.begin(9600);
   
+  //Print headers to serial
   Serial.print("V0, ");
   Serial.print("V1, ");
   Serial.print("V2, ");
@@ -16,22 +17,22 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Analog read of voltage in pin A0
   value0 = analogRead(voltage0);
   value0 = constrain(value0,400,1023);
   value0 = map(value0,400,1023,-25,25);
  
-
+  // Analog read of voltage in pin A1
   value1 = analogRead(voltage1);
   value1 = constrain(value1,400,1023);
   value1 = map(value1,400,1023,-25,25);
   
-
+  // Analog read of voltage in pin A2
   value2 = analogRead(voltage2);
   value2 = constrain(value2,400,1023);
   value2 = map(value2,400,1023,-25,25);
   
-
+  // Analog read of voltage in pin A3
   value3 = analogRead(voltage3);
   value3 = constrain(value3,400,1023);
   value3 = map(value,400,1023,-25,25);
