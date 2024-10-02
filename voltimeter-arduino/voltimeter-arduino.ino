@@ -35,7 +35,7 @@ void loop() {
   // Analog read of voltage in pin A3
   value3 = analogRead(voltage3);
   value3 = constrain(value3,400,1023);
-  value3 = map(value,400,1023,-25,25);
+  value3 = map(value3,400,1023,-25,25);
   
   Serial.print(value0);
   Serial.print(" ");
