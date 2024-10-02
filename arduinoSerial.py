@@ -11,4 +11,7 @@ ports = list_ports.comports()
 for port in ports:
      print(port)
 
+#Open csv file
+file = open("voltages_data.csv", "w", newline=' ')
+file.truncate
 
