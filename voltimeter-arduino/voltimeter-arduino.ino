@@ -25,12 +25,12 @@ void loop() {
   value1 = analogRead(voltage1);
   value1 = constrain(value1,400,1023);
   value1 = map(value1,400,1023,-25,25);
-  Serial.println(value1);
+  
 
   value2 = analogRead(voltage2);
   value2 = constrain(value2,400,1023);
   value2 = map(value2,400,1023,-25,25);
-  Serial.println(value2);
+  
 
   value3 = analogRead(voltage3);
   value3 = constrain(value3,400,1023);
