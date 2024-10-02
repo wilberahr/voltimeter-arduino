@@ -32,6 +32,16 @@ for line in range(data_points_max):
           decoded_data = read_bytes.decode('utf-8').strip('\r\n')
           print(decoded_data)
 
+          #Separating data in readed lines
+          if line == 0:
+               values =decoded_data.split(",")
+          else:
+               values = [float(x) for x in decoded_data.split()]
+          print(values)
+
+          write = csv.writer(file,delimiter = ",")
+          write.writerow(values)
+          
      except:
           print("Error: data not saved.")
 
